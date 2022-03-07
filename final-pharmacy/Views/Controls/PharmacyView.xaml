@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="final_pharmacy.Views.Controls.PharmacyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:final_pharmacy.Views.Controls"
+             xmlns:Nav="clr-namespace:final_pharmacy.Services.Navigations"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <GroupBox BorderBrush="Green" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="326" Width="472">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="30" Content="Pharmacy Details" Margin="0,20,0,0"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <StackPanel Margin="0,0,0,0">
+                <Label  FontSize="14" FontWeight="SemiBold" Margin="25,35,0,0" FontStyle="Italic" Content="Pharmacy Name:" HorizontalAlignment="Left" Height="26" Width="120"/>
+                <TextBlock Text="{Binding PharmacyName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="170,-18,0,0"/>
+                <Label Margin="25,30,0,0" FontSize="14" FontWeight="SemiBold" FontStyle="Italic" Content="Pharmacy Address:" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="140"/>
+                <TextBlock Text="{Binding PharmacyAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="170,-20,0,0"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

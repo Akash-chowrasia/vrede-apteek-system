@@ -1,0 +1,52 @@
+﻿<Application x:Class="final_pharmacy.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:final_pharmacy"
+             xmlns:viewModels="clr-namespace:final_pharmacy.ViewModels"
+             xmlns:views="clr-namespace:final_pharmacy.Views.Controls"
+             >
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewModels:AdminViewModel}">
+            <views:AdminView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:UpdateAdminViewModel}">
+            <views:UpdateAdminView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:NewAdminViewModel}">
+            <views:NewAdminView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ChangePasswordViewModel}">
+            <views:ChangePasswordView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:PharmacyViewModel}">
+            <views:PharmacyView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:UpdatePharmacyViewModel}">
+            <views:UpdatePharmacyView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:NewInventoryViewModel}">
+            <views:NewInventoryView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:InventoryViewModel}">
+            <views:InventoryView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:UpdateInventoryViewModel}">
+            <views:UpdateInventoryView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:NewCustomerViewModel}">
+            <views:NewCustomerView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:CustomerViewModel}">
+            <views:CustomerView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:UpdateCustomerViewModel}">
+            <views:UpdateCustomerView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:NewSaleViewModel}">
+            <views:NewSaleView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:SaleViewModel}">
+            <views:SaleView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

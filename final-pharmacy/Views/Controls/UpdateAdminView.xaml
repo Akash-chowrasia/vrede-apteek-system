@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="final_pharmacy.Views.Controls.UpdateAdminView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:final_pharmacy.Views.Controls"
+             xmlns:Nav="clr-namespace:final_pharmacy.Services.Navigations"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="0,0,0,0">
+        <GroupBox BorderBrush="Green" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="326" Width="472">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="30" Content="Update Admin Details" Margin="0,20,0,0"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <StackPanel Margin="0,0,0,0">
+                <Label FontSize="14" FontWeight="SemiBold" Margin="25,25,0,0" FontStyle="Italic" Content="User Name:" HorizontalAlignment="Left" Height="30" Width="135"/>
+                <TextBlock HorizontalAlignment="Left" Height="27" Margin="160,-30,0,0" TextWrapping="Wrap" Width="250" Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Margin="25,25,0,0" FontSize="14" FontWeight="SemiBold" FontStyle="Italic" Content="Email:" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="135"/>
+                <TextBox HorizontalAlignment="Left" Margin="160,-30,0,0" VerticalAlignment="Top" Width="250" Height="29" Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Margin="25,25,0,0" FontSize="14" FontWeight="SemiBold" FontStyle="Italic" Content="Keep Active:" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="135"/>
+                <CheckBox HorizontalAlignment="Left" Margin="160,-20,0,0" VerticalAlignment="Top" Width="250" Height="29" IsChecked="{Binding IsActive, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Background="Green" FontSize="15" Content="Save" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="90,30,0,30" VerticalAlignment="Top" Width="138" Height="41" Command="{Binding SubmitCommand}"/>
+                <Button Margin="190,-103,0,0" Content="Cancel" Width="125" Height="40" Background="Red" Command="{Binding CancelCommand}"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>
